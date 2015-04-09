@@ -6,9 +6,6 @@ public class SpiralMover : MonoBehaviour {
 	public float spiralSpeed;
 	public float expandSpeed;
 	private int rotationDirection;
-	public float sprayAngleRange = 0.3f;
-	public float sineAmplitude = 0.9f;
-	public float sineMagnitude = 0.5f;
 	private float timePassed = 0;
 	private Vector3 originalPosition;
 	private float offset;
@@ -32,12 +29,9 @@ public class SpiralMover : MonoBehaviour {
 
 		GetComponent<Rigidbody> ().position = newPosition;
 
-
 		float time = Time.deltaTime;
 		Vector3 angles = transform.localEulerAngles;
 
-		
 		transform.localEulerAngles = new Vector3 (0, spiralSpeed*360/(2*Mathf.PI)*time + angles.y, 0);
-
 	}
 }
