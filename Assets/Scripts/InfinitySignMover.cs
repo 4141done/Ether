@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AtomicMover : MonoBehaviour {
+public class InfinitySignMover : MonoBehaviour {
 
 	public float speed;
 	private int rotationDirection;
@@ -22,8 +22,8 @@ public class AtomicMover : MonoBehaviour {
 		float t = timePassed * speed;
 
 
-		float x = Mathf.Sin (t/5)*2; //* timePassed * speed;
-		float y = Mathf.Cos (t)* Mathf.Sin (t)*2;//* timePassed * speed;
+		float x = Mathf.Sin (t); //* timePassed * speed;
+		float y = Mathf.Cos (t) * Mathf.Sin (t); //* timePassed * speed;
 
 		Vector3 newPosition = originalPosition + new Vector3 (x, 0, y);
 
