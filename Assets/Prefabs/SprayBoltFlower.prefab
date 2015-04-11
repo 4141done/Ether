@@ -12,8 +12,8 @@ GameObject:
   - 136: {fileID: 13618638}
   - 114: {fileID: 11450382}
   m_Layer: 0
-  m_Name: SprayBoltSine
-  m_TagString: Shot
+  m_Name: SprayBoltFlower
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,11 +114,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 197658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b513392433eb01a41a5902c06b32baf5, type: 3}
+  m_Script: {fileID: 11500000, guid: f673af420baaf9c489ff02bea0016977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  amplitude: .5
+  speed: 3
+  a: 2
+  b: .75
+  c: 1
 --- !u!136 &13618638
 CapsuleCollider:
   m_ObjectHideFlags: 1

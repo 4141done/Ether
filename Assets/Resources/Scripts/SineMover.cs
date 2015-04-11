@@ -5,11 +5,9 @@ public class SineMover : MonoBehaviour {
 
 	public float speed;
 	private int rotationDirection;
-	public float sprayAngleRange = 0.3f;
-	public float sineAmplitude = 0.9f;
-	public float sineMagnitude = 0.5f;
 	private float timePassed = 0;
 	private Vector3 originalPosition;
+	public float amplitude;
 
 	void Start ()
 	{
@@ -23,8 +21,8 @@ public class SineMover : MonoBehaviour {
 	void FixedUpdate() {
 		timePassed += Time.deltaTime;
 
-		float x = Mathf.Sin (timePassed*speed) * timePassed * speed;
-		float y = Mathf.Cos (timePassed*speed) * timePassed * speed;
+		float x = amplitude*Mathf.Sin (timePassed * speed);// * timePassed * speed;
+		float y = timePassed * speed;
 
 		Vector3 newPosition = originalPosition + new Vector3 (x, 0, y);
 
