@@ -17,19 +17,27 @@ public class PlayerController : MonoBehaviour {
 	
 	private float nextFire;
 
-	private GameObject[] weapons;
+	private Object[] weapons;
 	private int currentWeapon = 0; 
 
 	void Start () {
-//		weapons = Resources.LoadAll()
-//		print (weapons.Length);
+		weapons = Resources.LoadAll ("Prefabs/Movers");
+		print (weapons);
+		print (weapons.Length);
 	}
 
 	void Update ()
 	{
+		if (Input.GetButtonUp ("Fire3")) {
+			if (currentWeapon == weapons.Length - 1) {
+				currentWeapon = 0;
+			} else {
+				currentWeapon++;
+			}
+		}
 		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
-			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+			Instantiate (weapons[currentWeapon], shotSpawn.position, shotSpawn.rotation);
 			GetComponent<AudioSource>().Play();//plays sound associated with object
 		}
 	}

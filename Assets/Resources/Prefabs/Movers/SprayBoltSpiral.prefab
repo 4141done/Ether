@@ -12,8 +12,8 @@ GameObject:
   - 136: {fileID: 13618638}
   - 114: {fileID: 11450382}
   m_Layer: 0
-  m_Name: SprayBoltNoRotate
-  m_TagString: Untagged
+  m_Name: SprayBoltSpiral
+  m_TagString: Shot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,11 +114,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 197658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 149434edfdf67c040bcf1823fc26345f, type: 3}
+  m_Script: {fileID: 11500000, guid: bf7d281d993737a4d8255031462c26ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  sprayAngleRange: .5
+  spiralSpeed: 0
+  expandSpeed: 40
 --- !u!136 &13618638
 CapsuleCollider:
   m_ObjectHideFlags: 1
