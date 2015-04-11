@@ -15,15 +15,16 @@ public class PlayerController : MonoBehaviour {
 	public Boundary boundary;
 	
 	private float nextFire;
+	private  GUIText weaponText;
 
 	private Object[] weapons;
+
 	private int currentWeapon = 0; 
 
 	void Start () {
 		weapons = Resources.LoadAll ("Prefabs/Weapons");
-		print (weapons);
-		print (weapons.Length);
 	}
+
 
 	void Update ()
 	{
@@ -34,6 +35,11 @@ public class PlayerController : MonoBehaviour {
 				currentWeapon++;
 			}
 		}
+		GameObject weapon = (GameObject) weapons [currentWeapon];
+		string weaponName = weapon.GetComponent<ObjectProps>().getWeaponName();
+		weaponText = GameObject.FindGameObjectWithTag ("WeaponDisplay").GetComponent<GUIText>();
+		weaponText.text = "Weapon: " + weaponName;
+
 		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
 			GameObject player = GameObject.FindGameObjectWithTag("Player");
