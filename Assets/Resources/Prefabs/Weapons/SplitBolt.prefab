@@ -118,6 +118,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  angle: 0
+  splitShot: {fileID: 197658, guid: 547d37efe26208b49890b61df9fc1e29, type: 2}
+  spawnCount: 3
 --- !u!136 &13649780
 CapsuleCollider:
   m_ObjectHideFlags: 1

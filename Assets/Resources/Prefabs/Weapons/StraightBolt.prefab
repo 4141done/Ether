@@ -12,7 +12,7 @@ GameObject:
   - 136: {fileID: 13649780}
   - 114: {fileID: 11439482}
   m_Layer: 0
-  m_Name: SprayBolt
+  m_Name: StraightBolt
   m_TagString: Shot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,11 +114,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 102694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 149434edfdf67c040bcf1823fc26345f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d6b834abe95b2b499af88d1aba9f4f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  sprayAngleRange: .200000003
+  angle: 0
 --- !u!136 &13649780
 CapsuleCollider:
   m_ObjectHideFlags: 1
