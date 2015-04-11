@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour {
 
 	public float speed = 10;
 	public GameObject shot;
-	public Transform shotSpawn;
 	public float fireRate;
 	public Boundary boundary;
 	
@@ -29,7 +28,10 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
-			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+
+			GameObject player = GameObject.FindGameObjectWithTag("Player");
+			Instantiate (shot, player.transform.position, new Quaternion(0,0,0,0));
+
 			GetComponent<AudioSource>().Play();//plays sound associated with object
 		}
 	}
