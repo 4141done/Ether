@@ -16,9 +16,6 @@ public class SprayMover : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
-
 		float time = Time.deltaTime;
 		Vector3 angles = transform.localEulerAngles;
 
