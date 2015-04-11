@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour {
 
 	public float speed = 10;
 	public GameObject shot;
-	public Transform shotSpawn;
 	public float fireRate;
 	public Boundary boundary;
 	
@@ -21,7 +20,7 @@ public class PlayerController : MonoBehaviour {
 	private int currentWeapon = 0; 
 
 	void Start () {
-		weapons = Resources.LoadAll ("Prefabs/Movers");
+		weapons = Resources.LoadAll ("Prefabs/Weapons");
 		print (weapons);
 		print (weapons.Length);
 	}
@@ -37,7 +36,9 @@ public class PlayerController : MonoBehaviour {
 		}
 		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
-			Instantiate (weapons[currentWeapon], shotSpawn.position, shotSpawn.rotation);
+			GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+			Instantiate (weapons[currentWeapon], player.transform.position, new Quaternion(0,0,0,0));
 			GetComponent<AudioSource>().Play();//plays sound associated with object
 		}
 	}
