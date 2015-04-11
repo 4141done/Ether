@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  shot: {fileID: 197658, guid: 6c6847b1559212f4d90734d25356ccc3, type: 2}
+  shot: {fileID: 197658, guid: 40ae9369fe8dce3498e208e2b38ba0a3, type: 2}
   fireRate: 0
   boundary:
     xMin: -6

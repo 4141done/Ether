@@ -1,34 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &197658
+--- !u!1 &102694
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 422540}
-  - 54: {fileID: 5449118}
-  - 136: {fileID: 13618638}
-  - 114: {fileID: 11450382}
-  - 114: {fileID: 11431192}
+  - 4: {fileID: 449932}
+  - 54: {fileID: 5492460}
+  - 136: {fileID: 13649780}
+  - 114: {fileID: 11439482}
   m_Layer: 0
-  m_Name: SprayBoltSine
+  m_Name: StraightBolt
   m_TagString: Shot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &197716
+--- !u!1 &115020
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 497764}
-  - 33: {fileID: 3385706}
-  - 23: {fileID: 2334124}
+  - 4: {fileID: 486844}
+  - 33: {fileID: 3316810}
+  - 23: {fileID: 2342222}
   m_Layer: 0
   m_Name: VFX
   m_TagString: Untagged
@@ -36,37 +35,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &422540
+--- !u!4 &449932
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197658}
+  m_GameObject: {fileID: 102694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.58769524, y: .37427032, z: -.569063187}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 497764}
+  - {fileID: 486844}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!4 &497764
+--- !u!4 &486844
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197716}
+  m_GameObject: {fileID: 115020}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 422540}
+  m_Father: {fileID: 449932}
   m_RootOrder: 0
---- !u!23 &2334124
+--- !u!23 &2342222
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197716}
+  m_GameObject: {fileID: 115020}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,19 +84,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3385706
+--- !u!33 &3316810
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197716}
+  m_GameObject: {fileID: 115020}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &5449118
+--- !u!54 &5492460
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197658}
+  m_GameObject: {fileID: 102694}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -107,37 +106,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &11431192
+--- !u!114 &11439482
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197658}
+  m_GameObject: {fileID: 102694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be710f81eb764d11a3a4072d288c836, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d6b834abe95b2b499af88d1aba9f4f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: COME ON GUYS
---- !u!114 &11450382
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b513392433eb01a41a5902c06b32baf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  amplitude: .5
---- !u!136 &13618638
+  speed: 5
+  angle: 0
+--- !u!136 &13649780
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197658}
+  m_GameObject: {fileID: 102694}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -154,5 +141,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 197658}
+  m_RootGameObject: {fileID: 102694}
   m_IsPrefabParent: 1

@@ -67,10 +67,5 @@ public class PlayerController : MonoBehaviour {
 			Mathf.Clamp (rigidbody.position.z, boundary.zMin, boundary.zMax)
 		);
 
-
-
-		        
-
-
 	}
 }

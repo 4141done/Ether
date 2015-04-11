@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AtomicMover : MonoBehaviour {
+public class FlowerMover : MonoBehaviour {
 
 	public float speed;
 	private int rotationDirection;
 	private float timePassed = 0;
 	private Vector3 originalPosition;
+	public float a;
+	public float b;
+	public float c;
 
 	void Start ()
 	{
@@ -22,9 +25,9 @@ public class AtomicMover : MonoBehaviour {
 		float t = timePassed * speed;
 
 		GameObject player = GameObject.FindGameObjectWithTag ("Player");
-		
-		float x = Mathf.Sin (t/5)*2; //* timePassed * speed;
-		float y = Mathf.Cos (t)* Mathf.Sin (t)*2;//* timePassed * speed;
+
+		float x = a*Mathf.Sin (t)-b*Mathf.Sin(c*t); //* timePassed * speed;
+		float y = a*Mathf.Cos (t)-b*Mathf.Cos(c*t);//* timePassed * speed;
 
 		Vector3 newPosition = player.transform.position + new Vector3 (x, 0, y);
 
