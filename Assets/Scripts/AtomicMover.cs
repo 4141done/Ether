@@ -21,11 +21,13 @@ public class AtomicMover : MonoBehaviour {
 		timePassed += Time.deltaTime;
 		float t = timePassed * speed;
 
+		GameObject player = GameObject.FindGameObjectWithTag ("Player");
+
 
 		float x = Mathf.Sin (t/5)*2; //* timePassed * speed;
 		float y = Mathf.Cos (t)* Mathf.Sin (t)*2;//* timePassed * speed;
 
-		Vector3 newPosition = originalPosition + new Vector3 (x, 0, y);
+		Vector3 newPosition = player.transform.position + new Vector3 (x, 0, y);
 
 		GetComponent<Rigidbody> ().position = newPosition;
 
