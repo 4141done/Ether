@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class Boundary {
@@ -13,8 +14,16 @@ public class PlayerController : MonoBehaviour {
 	public Transform shotSpawn;
 	public float fireRate;
 	public Boundary boundary;
-
+	
 	private float nextFire;
+
+	private GameObject[] weapons;
+	private int currentWeapon = 0; 
+
+	void Start () {
+//		weapons = Resources.LoadAll()
+//		print (weapons.Length);
+	}
 
 	void Update ()
 	{
