@@ -20,8 +20,15 @@ public class SineMover : MonoBehaviour {
 
 	void FixedUpdate() {
 		timePassed += Time.deltaTime;
+		float z = Mathf.Sin (timePassed * speed);
+		float x;
+		if (z <= 0) {
 
-		float x = amplitude*Mathf.Sin (timePassed * speed);// * timePassed * speed;
+		x = amplitude*(timePassed * speed);
+		} else {
+		x = -amplitude*(timePassed * speed);
+		}
+		//		float x = amplitude*Mathf.Sin (timePassed * speed);// * timePassed * speed;	//Old code
 		float y = timePassed * speed;
 
 		Vector3 newPosition = originalPosition + new Vector3 (x, 0, y);
