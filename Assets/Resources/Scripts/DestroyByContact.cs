@@ -3,7 +3,8 @@ using System.Collections;
 
 public class DestroyByContact : MonoBehaviour {
 	public GameObject explosion;
-	public int hitpoints = 1;
+	public GameObject playerExplosion;
+	public int hitpoints = 1;//Is This Correct!?!?!?
 	public int scoreValue;
 	protected GameController gameController;
 
@@ -24,12 +25,18 @@ public class DestroyByContact : MonoBehaviour {
 		if (other.tag == "Boundary") {
 			return;
 		}
-
-		if (other.tag != "Player") {
+		//if (other.tag != "Player") {  For God Mode
+		if (other.tag == "Player") {
+			Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
+			gameController.GameOver();
 			ExplodeOther (other.gameObject);
 		} else {
 			Instantiate (explosion, other.transform.position, other.transform.rotation);
 		}
+
+		//if (other.tag == "Player") {
+		//	Instantiate (playerExplosion, other.transform.position, other.transform.rotation);//FROM TUTORIAL
+		//}
 
 		//Transform t = gameObject.transform;
 		//float growth = 1.02f;

@@ -114,13 +114,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 197658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ce74a18b9be1244386cfcbed56b04f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 14cf2d6958de8dd4e8c084a4742ab7c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  sprayAngleRange: .5
-  sineAmplitude: .899999976
-  sineMagnitude: .5
+  speed: 10
 --- !u!136 &13618638
 CapsuleCollider:
   m_ObjectHideFlags: 1

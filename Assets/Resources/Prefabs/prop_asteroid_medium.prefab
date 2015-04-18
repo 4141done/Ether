@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -5
+  angle: 0
 --- !u!114 &11491294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,7 +117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  hitpoints: 8
+  playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
+  hitpoints: 3
   scoreValue: 20
 --- !u!136 &13653544
 CapsuleCollider:
