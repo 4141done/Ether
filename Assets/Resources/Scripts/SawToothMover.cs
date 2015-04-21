@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SineMover : MonoBehaviour {
+public class SawToothMover : MonoBehaviour {
 
 	public float speed;
 	private int rotationDirection;
@@ -22,7 +22,13 @@ public class SineMover : MonoBehaviour {
 	void FixedUpdate() {
 		timePassed += Time.deltaTime;
 		float y = timePassed * speed;
-		float x = amplitude*Mathf.Sin (y);
+		float z = Mathf.Sin (y+Mathf.PI/2);
+		
+		if (z <= 0) {
+			x = x + amplitude;
+		} else {
+			x = x - amplitude;
+		}
 
 		Vector3 newPosition = originalPosition + new Vector3 (x, 0, y);
 
