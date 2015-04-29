@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Start () {
 		weapons = Resources.LoadAll ("Prefabs/Weapons");
+		print (weapons);
 	}
 
 

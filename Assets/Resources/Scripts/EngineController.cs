@@ -15,7 +15,6 @@ public class EngineController : MonoBehaviour {
 		GameObject[] engines = GameObject.FindGameObjectsWithTag ("Engines");
 		foreach (GameObject engine in engines) {
 			ParticleSystem ps = engine.GetComponent<ParticleSystem>();
-			Vector3 position = ps.transform.position;
 
 			if (moveVertical > 0) {
 				ps.enableEmission = true;
