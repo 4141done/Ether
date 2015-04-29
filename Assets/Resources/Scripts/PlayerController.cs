@@ -12,18 +12,24 @@ public class PlayerController : MonoBehaviour {
 	public float speed = 10;
 	public GameObject shot;
 	public float fireRate;
-	public Boundary boundary;
-	
+	public Boundary boundary; 
+	public string defaultWeaponName;
+
 	private float nextFire;
 	private  GUIText weaponText;
 
 	private Object[] weapons;
 
-	private int currentWeapon = 0; 
+	private int currentWeapon = 0;
 
 	void Start () {
 		weapons = Resources.LoadAll ("Prefabs/Weapons");
-		print (weapons);
+		for (int i = 0; i < weapons.Length; i++) {
+			if (((GameObject)weapons[i]).GetComponent<ObjectProps> ().weaponName == defaultWeaponName) {
+				currentWeapon = i;
+				break;
+			}
+		}
 	}
 
 
@@ -37,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 		GameObject weapon = (GameObject) weapons [currentWeapon];
-		string weaponName = weapon.GetComponent<ObjectProps>().getWeaponName();
+		string weaponName = weapon.GetComponent<ObjectProps> ().weaponName;
 		weaponText = GameObject.FindGameObjectWithTag ("WeaponDisplay").GetComponent<GUIText>();
 		weaponText.text = "Weapon: " + weaponName;
 
