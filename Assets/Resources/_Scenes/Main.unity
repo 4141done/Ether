@@ -112,7 +112,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1938658883}
   - {fileID: 1773608129}
   - {fileID: 347729507}
   m_Father: {fileID: 0}
@@ -329,7 +328,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 55549424}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &380807684
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 93bdcaae53f95461785a8eeb8c01bc61, type: 2}
@@ -447,6 +446,7 @@ MonoBehaviour:
     xMax: 6
     zMin: -4
     zMax: 10
+  defaultWeaponName: 
 --- !u!4 &455534624
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 9ddab293e2a8af3499dac05f5fd6169c, type: 3}
@@ -1169,7 +1169,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 55549424}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &1791491191
 GameObject:
   m_ObjectHideFlags: 0

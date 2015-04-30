@@ -11,6 +11,7 @@ GameObject:
   - 54: {fileID: 5449118}
   - 136: {fileID: 13618638}
   - 114: {fileID: 11450382}
+  - 114: {fileID: 11401832}
   m_Layer: 0
   m_Name: SprayBoltSawTooth
   m_TagString: Shot
@@ -106,6 +107,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &11401832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be710f81eb764d11a3a4072d288c836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: BoneSaw McGraw
 --- !u!114 &11450382
 MonoBehaviour:
   m_ObjectHideFlags: 1
