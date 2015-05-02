@@ -329,11 +329,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 55549424}
   m_RootOrder: 1
---- !u!4 &380807684 stripped
+--- !u!4 &380807684
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 93bdcaae53f95461785a8eeb8c01bc61, type: 2}
   m_PrefabInternal: {fileID: 588031055}
---- !u!4 &386249003 stripped
+--- !u!4 &386249003
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 93bdcaae53f95461785a8eeb8c01bc61, type: 2}
   m_PrefabInternal: {fileID: 646551695}
@@ -395,7 +395,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ddab293e2a8af3499dac05f5fd6169c, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &455534619 stripped
+--- !u!1 &455534619
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 9ddab293e2a8af3499dac05f5fd6169c, type: 3}
   m_PrefabInternal: {fileID: 455534618}
@@ -447,7 +447,7 @@ MonoBehaviour:
     zMin: -4
     zMax: 10
   defaultWeaponName: Bang and Bang
---- !u!4 &455534624 stripped
+--- !u!4 &455534624
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 9ddab293e2a8af3499dac05f5fd6169c, type: 3}
   m_PrefabInternal: {fileID: 455534618}
@@ -1443,7 +1443,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
---- !u!4 &2078412462 stripped
+--- !u!4 &2078412462
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 93bdcaae53f95461785a8eeb8c01bc61, type: 2}
   m_PrefabInternal: {fileID: 502108192}

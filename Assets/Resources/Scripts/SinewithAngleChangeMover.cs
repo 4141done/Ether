@@ -31,7 +31,7 @@ public class SinewithAngleChangeMover : MonoBehaviour {
 
 		GetComponent<Rigidbody> ().position = newPosition;
 				
-		transform.localEulerAngles = new Vector3 (0, rotationDirection*360*timePassed + angles.y, 0);
+		transform.localEulerAngles = new Vector3 (0, rotationDirection*360*timePassed, 0);
 
 //		Vector3 angles = transform.localEulerAngles;
 //

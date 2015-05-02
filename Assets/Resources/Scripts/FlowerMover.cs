@@ -29,7 +29,7 @@ public class FlowerMover : MonoBehaviour {
 		float x = a*Mathf.Sin (t)-b*Mathf.Sin(c*t); //* timePassed * speed;
 		float y = a*Mathf.Cos (t)-b*Mathf.Cos(c*t);//* timePassed * speed;
 
-		Vector3 newPosition = player.transform.position + new Vector3 (x, 0, y);
+		Vector3 newPosition = originalPosition + new Vector3 (x, 0, y);
 
 		GetComponent<Rigidbody> ().position = newPosition;
 

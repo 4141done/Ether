@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11450382}
   - 114: {fileID: 11431192}
   m_Layer: 0
-  m_Name: SprayBoltSine
+  m_Name: SprayBoltSinewithAngleChange
   m_TagString: Shot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be710f81eb764d11a3a4072d288c836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: COME ON GUYS
+  weaponName: Gut Spew
 --- !u!114 &11450382
 MonoBehaviour:
   m_ObjectHideFlags: 1

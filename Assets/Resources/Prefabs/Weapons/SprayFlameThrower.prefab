@@ -12,8 +12,9 @@ GameObject:
   - 136: {fileID: 13649780}
   - 114: {fileID: 11439482}
   - 114: {fileID: 11483850}
+  - 114: {fileID: 11422446}
   m_Layer: 0
-  m_Name: SprayBolt
+  m_Name: SprayFlameThrower
   m_TagString: Shot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,6 +108,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &11422446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e3a5ae7181bfb44b6a7b841d285b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: .174999997
 --- !u!114 &11439482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,8 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 149434edfdf67c040bcf1823fc26345f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  sprayAngleRange: .200000003
+  speed: 30
+  sprayAngleRange: .400000006
 --- !u!114 &11483850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be710f81eb764d11a3a4072d288c836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: Snake Fuck
+  weaponName: Hot Slut
 --- !u!136 &13649780
 CapsuleCollider:
   m_ObjectHideFlags: 1
