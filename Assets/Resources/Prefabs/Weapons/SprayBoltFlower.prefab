@@ -131,9 +131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  a: 2
-  b: .75
-  c: 1
+  a: 2.4000001
+  b: 1.60000002
+  c: .660000026
 --- !u!136 &13618638
 CapsuleCollider:
   m_ObjectHideFlags: 1
