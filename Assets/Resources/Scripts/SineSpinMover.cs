@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SinewithAngleChangeMover : MonoBehaviour {
+public class SineSpinMover : MonoBehaviour {
 
 	public float speed;
 	private int rotationDirection;
