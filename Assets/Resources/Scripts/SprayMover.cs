@@ -20,5 +20,7 @@ public class SprayMover : MonoBehaviour {
 		Vector3 angles = transform.localEulerAngles;
 
 		transform.localEulerAngles = new Vector3 (0, rotationDirection*360*time + angles.y, 0);
+
+
 	}
 }
