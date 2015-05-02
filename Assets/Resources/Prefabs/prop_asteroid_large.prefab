@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11425988}
   - 114: {fileID: 11493586}
   - 114: {fileID: 11427056}
+  - 114: {fileID: 11464278}
   m_Layer: 0
   m_Name: prop_asteroid_large
   m_TagString: Untagged
@@ -109,6 +110,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -10
   angle: 0
+--- !u!114 &11464278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009ca9a9309124da782c8fe7bbff44a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoints: 5
+  mass: 20
+  collisionDamage: 20
 --- !u!114 &11493586
 MonoBehaviour:
   m_ObjectHideFlags: 1

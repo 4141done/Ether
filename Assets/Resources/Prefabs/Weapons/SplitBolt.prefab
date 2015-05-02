@@ -12,6 +12,7 @@ GameObject:
   - 136: {fileID: 13649780}
   - 114: {fileID: 11439482}
   - 114: {fileID: 11411578}
+  - 114: {fileID: 11405970}
   m_Layer: 0
   m_Name: SplitBolt
   m_TagString: Untagged
@@ -107,6 +108,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &11405970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009ca9a9309124da782c8fe7bbff44a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoints: 1
+  mass: 1
+  collisionDamage: 1
 --- !u!114 &11411578
 MonoBehaviour:
   m_ObjectHideFlags: 1

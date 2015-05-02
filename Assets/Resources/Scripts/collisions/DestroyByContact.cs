@@ -25,14 +25,38 @@ public class DestroyByContact : MonoBehaviour {
 		if (other.tag == "Boundary") {
 			return;
 		}
-		//if (other.tag != "Player") {  For God Mode
-		if (other.tag == "Player") {
-				Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
-			gameController.GameOver();
-			ExplodeOther (other.gameObject);
-		} else {
-			Instantiate (explosion, other.transform.position, other.transform.rotation);
+
+		CollisionProps otherCollisionProps = other.gameObject.GetComponent<CollisionProps> ();
+		CollisionProps thisCollisionProps = gameObject.GetComponent<CollisionProps> ();
+
+		if (otherCollisionProps != null && thisCollisionProps != null) {
+			otherCollisionProps.hitpoints -= thisCollisionProps.collisionDamage;
+			thisCollisionProps.hitpoints -= otherCollisionProps.collisionDamage;
+
+			if (thisCollisionProps.hitpoints <= 0) {
+				ExplodeThis (gameObject);
+			}
+
+			if (otherCollisionProps.hitpoints <= 0) {
+				if (other.tag == "Player") {
+					Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
+					gameController.GameOver ();
+					ExplodeOther(other.gameObject);
+				} else {
+					Instantiate (explosion, other.transform.position, other.transform.rotation);
+				}
+			}
+
 		}
+
+		//if (other.tag != "Player") {  For God Mode
+//		if (other.tag == "Player") {
+//				Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
+//			gameController.GameOver();
+//			ExplodeOther (other.gameObject);
+//		} else {
+//			Instantiate (explosion, other.transform.position, other.transform.rotation);
+//		}
 
 		//if (other.tag == "Player") {
 		//	Instantiate (playerExplosion, other.transform.position, other.transform.rotation);//FROM TUTORIAL
@@ -42,9 +66,9 @@ public class DestroyByContact : MonoBehaviour {
 		//float growth = 1.02f;
 		//t.localScale = new Vector3 (t.localScale.x*growth, t.localScale.y*growth, t.localScale.z*growth);
 
-		if (--hitpoints <= 0) {
-			ExplodeThis (gameObject);
-		}
+//		if (--hitpoints <= 0) {
+//			ExplodeThis (gameObject);
+//		}
 	}
 
 	protected virtual void ExplodeOther(GameObject go) {

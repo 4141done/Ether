@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11439482}
   - 114: {fileID: 11483850}
   - 114: {fileID: 11422446}
+  - 114: {fileID: 11476860}
   m_Layer: 0
   m_Name: SprayFlameThrower
   m_TagString: Shot
@@ -133,6 +134,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   sprayAngleRange: .400000006
+--- !u!114 &11476860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009ca9a9309124da782c8fe7bbff44a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoints: 1
+  mass: 1
+  collisionDamage: 1
 --- !u!114 &11483850
 MonoBehaviour:
   m_ObjectHideFlags: 1
