@@ -4,7 +4,6 @@ using System.Collections;
 public class DestroyByContact : MonoBehaviour {
 	public GameObject explosion;
 	public GameObject playerExplosion;
-	public int hitpoints = 1;//Is This Correct!?!?!?
 	public int scoreValue;
 	protected GameController gameController;
 
@@ -30,8 +29,12 @@ public class DestroyByContact : MonoBehaviour {
 		CollisionProps thisCollisionProps = gameObject.GetComponent<CollisionProps> ();
 
 		if (otherCollisionProps != null && thisCollisionProps != null) {
-			otherCollisionProps.hitpoints -= thisCollisionProps.collisionDamage;
-			thisCollisionProps.hitpoints -= otherCollisionProps.collisionDamage;
+			otherCollisionProps.SubtractHitpoints(thisCollisionProps.collisionDamage);
+			thisCollisionProps.SubtractHitpoints(otherCollisionProps.collisionDamage);
+
+			if (other.tag == "Player") {
+				gameController.SetHP(otherCollisionProps.hitpoints, otherCollisionProps.GetMaxHitPoints());
+			}
 
 			if (thisCollisionProps.hitpoints <= 0) {
 				ExplodeThis (gameObject);
@@ -44,6 +47,7 @@ public class DestroyByContact : MonoBehaviour {
 					ExplodeOther(other.gameObject);
 				} else {
 					Instantiate (explosion, other.transform.position, other.transform.rotation);
+					ExplodeOther (other.gameObject);
 				}
 			}
 

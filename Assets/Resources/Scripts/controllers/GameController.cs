@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
 	public GUIText scoreText;
 	public GUIText restartText;
 	public GUIText gameOverText;
+	public GUIText hpBar;
 	private bool gameOver;
 	private bool restart;
 
@@ -23,6 +24,10 @@ public class GameController : MonoBehaviour
 		restart = false;
 		restartText.text = "";
 		gameOverText.text = "";
+
+		CollisionProps collisionProps = GameObject.FindWithTag ("Player").GetComponent<PlayerCollisionProps> ();
+		SetHP (collisionProps.hitpoints, collisionProps.GetMaxHitPoints ());
+
 		score = 0;
 		StartCoroutine (SpawnWaves ());
 	}
@@ -67,9 +72,14 @@ public class GameController : MonoBehaviour
 
 	void UpdateScore ()
 	{
-			scoreText.text = "Score: " +score;
+		scoreText.text = "Score: " +score;
 	}
-public void GameOver()
+
+	public void SetHP(int hitpoints, int maxHitpoints) {
+		hpBar.text = "HP: " + hitpoints + "/" + maxHitpoints;
+	}
+
+	public void GameOver()
 	{
 		gameOverText.text = "Game Over Mother Fucker!";
 		gameOver = true;

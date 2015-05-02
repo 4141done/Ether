@@ -9,6 +9,7 @@ TagManager:
   - Engines
   - Shot
   - WeaponDisplay
+  - HP Bar
   layers:
   - Default
   - TransparentFX

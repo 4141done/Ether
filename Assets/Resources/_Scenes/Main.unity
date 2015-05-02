@@ -329,11 +329,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 55549424}
   m_RootOrder: 1
---- !u!4 &380807684
+--- !u!4 &380807684 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 93bdcaae53f95461785a8eeb8c01bc61, type: 2}
   m_PrefabInternal: {fileID: 588031055}
---- !u!4 &386249003
+--- !u!4 &386249003 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 93bdcaae53f95461785a8eeb8c01bc61, type: 2}
   m_PrefabInternal: {fileID: 646551695}
@@ -395,7 +395,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ddab293e2a8af3499dac05f5fd6169c, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &455534619
+--- !u!1 &455534619 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 9ddab293e2a8af3499dac05f5fd6169c, type: 3}
   m_PrefabInternal: {fileID: 455534618}
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 455534619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 009ca9a9309124da782c8fe7bbff44a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c666e8a979cf4fd99ee1972a0cf6a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hitpoints: 100
@@ -838,6 +838,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &814883395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 814883396}
+  - 132: {fileID: 814883397}
+  m_Layer: 0
+  m_Name: HP Bar
+  m_TagString: HP Bar
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &814883396
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 814883395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1980410661}
+  m_RootOrder: 2
+--- !u!132 &814883397
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 814883395}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 'HP:'
+  m_Anchor: 8
+  m_Alignment: 2
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 30
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1 &1083029554
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +926,7 @@ MonoBehaviour:
   scoreText: {fileID: 1938658882}
   restartText: {fileID: 1773608128}
   gameOverText: {fileID: 347729506}
+  hpBar: {fileID: 814883397}
   score: 0
 --- !u!4 &1083029556
 Transform:
@@ -1322,6 +1374,7 @@ Transform:
   m_Children:
   - {fileID: 1938658883}
   - {fileID: 157669938}
+  - {fileID: 814883396}
   m_Father: {fileID: 0}
   m_RootOrder: 10
 --- !u!1 &1988555939
@@ -1457,7 +1510,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
---- !u!4 &2078412462
+--- !u!4 &2078412462 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 93bdcaae53f95461785a8eeb8c01bc61, type: 2}
   m_PrefabInternal: {fileID: 502108192}
