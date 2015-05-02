@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 	private Object[] weapons;
 
 	private int currentWeapon = 0;
+	GameObject weapon;
 
 	void Start () {
 		weapons = Resources.LoadAll ("Prefabs/Weapons");
@@ -42,7 +43,8 @@ public class PlayerController : MonoBehaviour {
 				currentWeapon++;
 			}
 		}
-		GameObject weapon = (GameObject) weapons [currentWeapon];
+
+		weapon = (GameObject) weapons [currentWeapon];
 		string weaponName = weapon.GetComponent<ObjectProps> ().weaponName;
 		weaponText = GameObject.FindGameObjectWithTag ("WeaponDisplay").GetComponent<GUIText>();
 		weaponText.text = "Weapon: " + weaponName;
