@@ -23,7 +23,7 @@ public class SineSpinMover : MonoBehaviour {
 		timePassed += Time.deltaTime;
 		float y = timePassed * speed;
 		float x = amplitude*Mathf.Sin (y);
-		float z = 90*Mathf.Cos (y);//derivative of x
+		float z = 45*Mathf.Cos (y);//derivative of x
 		Vector3 angles = transform.localEulerAngles;
 
 		Vector3 newPosition = originalPosition + new Vector3 (x, 0, y);
