@@ -27,7 +27,7 @@ public class DestroyByContact : MonoBehaviour {
 		}
 		//if (other.tag != "Player") {  For God Mode
 		if (other.tag == "Player") {
-			Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
+				Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
 			gameController.GameOver();
 			ExplodeOther (other.gameObject);
 		} else {
