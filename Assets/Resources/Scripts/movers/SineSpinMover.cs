@@ -23,14 +23,14 @@ public class SineSpinMover : MonoBehaviour {
 		timePassed += Time.deltaTime;
 		float y = timePassed * speed;
 		float x = amplitude*Mathf.Sin (y);
-		float z = amplitude*Mathf.Sin (y);//derivative of x
+		float z = 45*Mathf.Cos (y);//derivative of x
 		Vector3 angles = transform.localEulerAngles;
 
 		Vector3 newPosition = originalPosition + new Vector3 (x, 0, y);
 
 		GetComponent<Rigidbody> ().position = newPosition;
 				
-		transform.localEulerAngles = new Vector3 (0, z*360*timePassed, 0);
+		transform.localEulerAngles = new Vector3 (0, z, 0);
 
 //		Vector3 angles = transform.localEulerAngles;
 //
