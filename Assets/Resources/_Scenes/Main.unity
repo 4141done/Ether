@@ -461,7 +461,7 @@ MonoBehaviour:
   hitpoints: 100
   mass: 100
   collisionDamage: 50
---- !u!4 &455534624 stripped
+--- !u!4 &455534624
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 9ddab293e2a8af3499dac05f5fd6169c, type: 3}
   m_PrefabInternal: {fileID: 455534618}
