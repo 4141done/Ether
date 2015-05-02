@@ -23,16 +23,21 @@ public class SawToothMover : MonoBehaviour {
 		timePassed += Time.deltaTime;
 		float y = timePassed * speed;
 		float z = Mathf.Sin (y+Mathf.PI/2);
+		float angleChange;
 		
 		if (z <= 0) {
 			x = x + amplitude;
+			angleChange = 45;
 		} else {
 			x = x - amplitude;
+			angleChange = -45;
 		}
 
 		Vector3 newPosition = originalPosition + new Vector3 (x, 0, y);
 
 		GetComponent<Rigidbody> ().position = newPosition;
+
+		transform.localEulerAngles = new Vector3 (0, angleChange, 0);
 
 //		Vector3 angles = transform.localEulerAngles;
 //
