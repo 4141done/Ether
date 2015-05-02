@@ -25,6 +25,7 @@ public class SinewithAngleChangeMover : MonoBehaviour {
 		float x = amplitude*Mathf.Sin (y);
 		Vector3 angles = transform.localEulerAngles;
 
+		rotationDirection = 1;
 
 		Vector3 newPosition = originalPosition + new Vector3 (x, 0, y);
 
