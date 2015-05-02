@@ -447,7 +447,7 @@ MonoBehaviour:
     zMin: -4
     zMax: 10
   defaultWeaponName: Bang and Bang
---- !u!4 &455534624
+--- !u!4 &455534624 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 9ddab293e2a8af3499dac05f5fd6169c, type: 3}
   m_PrefabInternal: {fileID: 455534618}

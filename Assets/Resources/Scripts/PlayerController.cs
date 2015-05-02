@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Update ()
 	{
-		if (Input.GetButtonUp ("Fire3")) {
+		if (Input.GetButtonUp ("Change Weapon")) {
 			if (currentWeapon == weapons.Length - 1) {
 				currentWeapon = 0;
 			} else {
