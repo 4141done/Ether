@@ -10,11 +10,11 @@ GameObject:
   - 4: {fileID: 422540}
   - 54: {fileID: 5449118}
   - 136: {fileID: 13618638}
-  - 114: {fileID: 11450382}
   - 114: {fileID: 11431192}
   - 114: {fileID: 11471424}
+  - 114: {fileID: 11435972}
   m_Layer: 0
-  m_Name: SprayBoltSinewithAngleChange
+  m_Name: SprayBoltExpansionsCouple
   m_TagString: Shot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be710f81eb764d11a3a4072d288c836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: Wiggle Wobble
---- !u!114 &11450382
+  weaponName: Gut Spew
+--- !u!114 &11435972
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -128,11 +128,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 197658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 609527545cd0fcb44af8a051ba433462, type: 3}
+  m_Script: {fileID: 11500000, guid: fad7e1a82d169b94a986d0e41855cf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  amplitude: .5
+  x: 1
+  fireRate: 10
+  shot1: {fileID: 197658, guid: d9db8331c9aa0f7409c47e68d323ef3d, type: 2}
+  shot2: {fileID: 102694, guid: 8009eb08aba16f8409c93574977b9c7c, type: 2}
 --- !u!114 &11471424
 MonoBehaviour:
   m_ObjectHideFlags: 1
