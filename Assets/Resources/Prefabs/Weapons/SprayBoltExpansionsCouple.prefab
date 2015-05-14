@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11431192}
   - 114: {fileID: 11471424}
   - 114: {fileID: 11435972}
+  - 114: {fileID: 11432736}
   m_Layer: 0
   m_Name: SprayBoltExpansionsCouple
   m_TagString: Shot
@@ -120,6 +121,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Gut Spew
+--- !u!114 &11432736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e3a5ae7181bfb44b6a7b841d285b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: .174999997
 --- !u!114 &11435972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -133,9 +146,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   x: 1
-  fireRate: 10
+  fireRate: 200
   shot1: {fileID: 197658, guid: d9db8331c9aa0f7409c47e68d323ef3d, type: 2}
-  shot2: {fileID: 102694, guid: 8009eb08aba16f8409c93574977b9c7c, type: 2}
+  shot2: {fileID: 102694, guid: bc400550a2c98c14a87ee73a41042547, type: 2}
 --- !u!114 &11471424
 MonoBehaviour:
   m_ObjectHideFlags: 1
